@@ -3,25 +3,54 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+    ) rgb(var(--background-start-rgb));
+}
+
+.player-wrapper {
+    display: grid;
+    height: 100vh;
+    place-items: center
+}
+
+.pronoun-badge {
+    padding-top: 0.1em;
+    padding-bottom: 0.1rem
+}
+
+.card {
+    @apply rounded-lg bg-black border-gray-200 shadow-md overflow-hidden relative;
+}
+
+.card-badge {
+    @apply absolute top-0 ml-2 mt-2 p-2 text-gold bg-purple-500 text-sm uppercase font-bold rounded-full;
+}
+
+.card-social {
+    @apply flex justify-center items-center absolute bottom-0 left-0 right-0;
+    margin-bottom: 1rem; /* Add margin-bottom to create space between card-social and player name */
+    padding-bottom: 1rem; /* Add padding-bottom to create space for card-social */
+}
+
+.card-social-icon {
+    @apply bg-gold text-purple-500 m-2 p-2 rounded-full;
+    filter: drop-shadow(0px 2px 4px rgba(128, 78, 191, 0.5)); /* Add drop shadow */
 }
