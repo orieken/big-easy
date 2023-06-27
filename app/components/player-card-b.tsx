@@ -1,4 +1,3 @@
-import { PlayerCardProps } from '@rieken/app/components/player-card';
 import { FC } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,6 +9,7 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube';
 import { faTwitch } from '@fortawesome/free-brands-svg-icons/faTwitch';
+import { PlayerCardProps } from '@rieken/app/components/player-card-props.type';
 
 config.autoAddCss = false;
 
