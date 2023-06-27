@@ -61,6 +61,7 @@ const Players: Player[] = [
   tangles,
   hotCrossBunny,
   thembalina,
+  kineLeeKillz,
   {
     name: 'Ma-Killveli',
     imageUrl: '/ma-killveli.jpeg',

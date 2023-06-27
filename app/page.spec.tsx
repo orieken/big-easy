@@ -5,8 +5,6 @@ import Home from '@rieken/app/page';
 describe('Home', () => {
   it('renders a heading', async () => {
     render(<Home />);
-    const logo = screen.getByAltText(/Vercel Logo/);
-
-    expect(logo).toBeInTheDocument();
+    expect(screen.getByRole('heading')).toHaveTextContent('Big Easy Roller Derby');
   });
 });
