@@ -46,24 +46,27 @@ const PlayerCardB: FC<PlayerCardProps> = ({ player }) => {
       <div className="card-social">
         {/*{Player Social media}*/}
         {player.socials && (
-            <div className="card-social">
-              {Object.keys(player.socials).map((social) => (
-                <a
-                  href={social}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                  key={social}
-                >
-                  <FontAwesomeIcon
-                    icon={socialMediaMap[social as keyof typeof socialMediaMap]}
-                    color="purple"
-                    className="card-social-icon"
-                  />
-                </a>
-              ))}
-            </div>
-          )}
+          <div className="card-social">
+            {Object.keys(player.socials).map((social) => (
+              <a
+                // make the href be the value of the social media key
+                href={player.socials?.[social as keyof typeof player.socials]}
+                role="link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+                key={social}
+              >
+                <FontAwesomeIcon
+                  name={social}
+                  icon={socialMediaMap[social as keyof typeof socialMediaMap]}
+                  color="purple"
+                  className="card-social-icon"
+                />
+              </a>
+            ))}
+          </div>
+        )}
       </div>
 
     </div>
