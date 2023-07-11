@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+deployed here [big-easy](https://big-easy-6cwj90ebb-orieken.vercel.app/)
 
 ```bash
 npm run dev

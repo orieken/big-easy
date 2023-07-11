@@ -24,16 +24,16 @@ const socialMediaMap = {
 
 const PlayerCardB: FC<PlayerCardProps> = ({ player }) => {
   return (
-    <div className="card">
+    <div className="card shadow-glow hover:shadow-hover transition-shadow duration-200 ease-in-out">
       {/*{Player Image}*/}
       <Image
         src={player.imageUrl}
         alt={player.name}
         className="w-full object-cover"
       />
-      <div className="text-center">
-        <span className="text-gold font-bold">{player.name}</span>
-        <span className="text-xs text-gold-300 p-2">{player.pronouns.join('/')}</span>
+      <div className="text-center flex flex-col md:flex-row justify-center items-center">
+        <span className="text-sm font-bold text-gold md:mr-2">{player.name}</span>
+        <span className="p-2 text-xs text-gold-300 md:ml-2 md:p-o">{player.pronouns.join('/')}</span>
       </div>
 
       <div className="card-badge">

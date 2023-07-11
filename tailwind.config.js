@@ -19,7 +19,16 @@ module.exports = {
                 'gradient-conic':
                     'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
             },
+            boxShadow: {
+                glow: '0 0 10px #A855F7', // Normal state (light purple glow)
+                hover: '0 0 20px #A855F7' // Hover state (more intense light purple glow)
+            },
         },
+    },
+    variants: {
+        extend: {
+            boxShadow: ['hover']
+        }
     },
     plugins: [],
 }

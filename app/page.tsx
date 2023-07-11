@@ -25,7 +25,7 @@ export default function Home() {
         <h3 className="text-2xl font-semibold">Roster</h3>
       </header>
 
-      <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+      <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 ">
           {playersBlist}
       </div>
     </main>
